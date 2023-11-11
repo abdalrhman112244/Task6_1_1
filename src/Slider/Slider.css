@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw; 
+    margin: 0 auto; 
+    position: relative;
+  }
+  .slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom:20px ;
+  }
+  
+  .slide {
+    margin-top: 30px;
+    flex: 0 0 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide.active {
+    display: flex;
+  }
+  
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .prev{
+    left: 0;
+    margin-left: 30px;
+    justify-content: center;
+  }
+  .next{
+    right: 0;
+    margin-right: 30px;
+    justify-content: center;
+  }
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .the-icon1,.the-icon2{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .the-icon1:active,.the-icon2:active{
+    animation: myAnim 2s ease 0s 1 normal forwards; 
+  }
+  @keyframes myAnim {
+      0% {
+          transform: scale(0.5);
+      }
+  
+      100% {
+          transform: scale(1);
+      }
+  }
+  .dots-container {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: black !important;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+  @keyframes myAnim {
+      0%,
+      50%,
+      100% {
+          opacity: 1;
+      }
+  
+      25%,
+      75% {
+          opacity: 0;
+      }
+  }
+  .slide img{
+    max-width: 70%;
+    height: auto;
+  }
+  
